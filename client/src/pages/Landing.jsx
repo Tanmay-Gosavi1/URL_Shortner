@@ -38,7 +38,7 @@ const Landing = () => {
         <Navbar />
 
         <div className='px-5 py-2 bg-[#d1fb9d] w-fit rounded-full mb-7 mt-[100px] md:mt-[130px] border border-[#53781b] hover:scale-105 transition-all duration-200'>
-            <h1 className='w-full text-[#53781b] text-sm font-base'>For modern remote teams</h1>
+            <h1 className='w-full text-[#30460f] text-sm font-base'>For modern remote teams</h1>
         </div>
 
         {/* Header text */}
@@ -56,7 +56,7 @@ const Landing = () => {
 
         <div className='flex md:flex-row space-y-3 md:gap-0 justify-center items-center border-none md:border rounded-xl mb-9'>
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-3'>
-                <input {...register("longUrl")} type="text" required autoComplete='off' autoCorrect='off' className="h-full w-full outline-none px-10 py-3 rounded-xl md:rounded-l-xl border-2 transition-transform duration-200" placeholder='Paste your long URL here...'/>
+                <input {...register("longUrl")} type="text" required autoComplete='off' autoCorrect='off' className="h-full w-full outline-none px-10 py-3 rounded-xl md:rounded-l-xl border-2 transition-transform duration-200 text-gray-500" placeholder='Paste your long URL here...'/>
                 <button className='h-full w-full px-4 py-[11px] bg-black text-white rounded-xl md:rounded-r-xl cursor-pointer transition-colors duration-200 hover:bg-[#031f39] ' type='submit'>Shorten URL</button>
             </form>
         </div>

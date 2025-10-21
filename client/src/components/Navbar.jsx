@@ -3,6 +3,7 @@ import CTA from './CTA.jsx'
 import {Scissors} from 'lucide-react'
 import {Sun , Moon} from 'lucide-react'
 import { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   const [isDark , setIsDark] = useState(false)
@@ -14,16 +15,16 @@ const Navbar = () => {
     <div className='w-full flex items-center justify-center mt-7 md:mt-12'>
       <div className='border-[1.5px] border-black/30 rounded-lg w-full xl:w-[80%] flex justify-between items-center p-3'>
         {/* Logo */}
-        <div className='flex justify-center items-center gap-3/4'>
+        <div className='flex justify-center items-center gap-3/4 cursor-pointer'>
           <Scissors size={21} strokeWidth={2.5}/>
           <h1 className='text-lg font-semibold'>Slack</h1>
         </div>
 
         {/* Links */}
         <div className='hidden sm:flex justify-center items-center gap-4'>
-          <h1>Features</h1>
-          <h1>Benefits</h1>
-          <h1>Pricing</h1>
+          <Link to="/">Features</Link>
+          <Link to="/">Benefits</Link>
+          <Link to="/">Pricing</Link>
         </div>
 
         {/* CTA */}
