@@ -34,7 +34,7 @@ const Landing = () => {
         })
     }
   return (
-    <div className='min-h-screen w-full px-6 md:px-10 lg:px-12 xl:px-14 flex flex-col items-center  '>
+    <div className='min-h-screen w-full px-6 md:px-10 lg:px-12 xl:px-14 flex flex-col items-center dark:bg-[#030712] dark:text-[#f7f7f7]'>
         <Navbar />
 
         <div className='px-5 py-2 bg-[#d1fb9d] w-fit rounded-full mb-7 mt-[100px] md:mt-[130px] border border-[#53781b] hover:scale-105 transition-all duration-200'>
@@ -49,15 +49,15 @@ const Landing = () => {
         </div>
 
         <div className='mb-10'>
-            <p className='text-center text-gray-600 font-medium text-base'>Slack is free to try for as long as you like</p>
+            <p className='text-center text-gray-600 dark:text-white/50 font-medium text-base'>Slack is free to try for as long as you like</p>
         </div>
 
         {/* Input for  longUrl */}
 
         <div className='flex md:flex-row space-y-3 md:gap-0 justify-center items-center border-none md:border rounded-xl mb-9'>
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-3'>
-                <input {...register("longUrl")} type="text" required autoComplete='off' autoCorrect='off' className="h-full w-full outline-none px-10 py-3 rounded-xl md:rounded-l-xl border-2 transition-transform duration-200 text-gray-500" placeholder='Paste your long URL here...'/>
-                <button className='h-full w-full px-4 py-[11px] bg-black text-white rounded-xl md:rounded-r-xl cursor-pointer transition-colors duration-200 hover:bg-[#031f39] ' type='submit'>Shorten URL</button>
+                <input {...register("longUrl")} type="text" required autoComplete='off' autoCorrect='off' className="h-full w-full outline-none px-10 py-3 rounded-xl md:rounded-l-xl border-2 transition-transform duration-200 text-gray-500 dark:text-white/80" placeholder='Paste your long URL here...'/>
+                <button className='h-full w-full px-4 py-[11px] bg-black dark:bg-[#f7f7f7] text-white dark:text-black rounded-xl md:rounded-r-xl cursor-pointer transition-colors duration-200 hover:bg-[#031f39] dark:hover:bg-white/70' type='submit'>Shorten URL</button>
             </form>
         </div>
 
@@ -67,7 +67,7 @@ const Landing = () => {
                         <h1>{sUrl}</h1>
                         <Copy size={16} />
                     </div>
-                    <p className='text-xs font-medium text-gray-500 opacity-50'>Click to copy</p>
+                    <p className='text-xs font-medium text-gray-500 dark:text-white opacity-50'>Click to copy</p>
             </>
         }
         
